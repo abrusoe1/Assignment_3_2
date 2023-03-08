@@ -16,10 +16,11 @@ export class AppComponent {
     this.tasks[i].completed = true;
   }
 
-  //The next three lines are commented out so that ng serve -o will actually compile
-  // addTask():void{
-  //   this.tasks.push({task: this.newTask, completed: false});
-  // }
+  addTask(){
+    let taskName: string = (<HTMLInputElement> document.getElementById("AddInput")).value;
+    let t : Todo = {task:taskName, completed:false};
+    this.tasks.push;
+  }
 
   removeTask(i: number):void{
     this.tasks.splice(i, 1);
