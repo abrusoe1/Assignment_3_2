@@ -16,11 +16,11 @@ export class AppComponent {
     this.tasks[i].completed = true;
   }
 
-  addTask(){
-    let taskName: string = (<HTMLInputElement> document.getElementById("AddInput")).value;
-    let t : Todo = {task:taskName, completed:false};
-    this.tasks.push;
-  }
+  // addTask(){
+  //   let taskName: string = (<HTMLInputElement> document.getElementById("AddInput")).value;
+  //   let t : Todo = {task:taskName, completed:false};
+  //   this.tasks.push;
+  // }
 
   removeTask(i: number):void{
     this.tasks.splice(i, 1);

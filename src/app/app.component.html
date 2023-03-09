@@ -3,18 +3,16 @@
 
 <h2>List</h2>
 <div *ngFor="let todo of tasks; index as i">
-    <button *ngIf="todo.completed === false" (click)="completeTask(i)" style="display: inline-block;">Complete</button>
+    <app-todo [todoDisplay]="todo"></app-todo>
+    <!-- <button *ngIf="todo.completed === false" (click)="completeTask(i)" style="display: inline-block;">Complete</button>
     <p *ngIf="todo.completed === true" id="whenTrue" style="display: inline-block" >{{todo.task}}</p>
-    <p *ngIf="todo.completed === false" style="display: inline-block">{{todo.task}}</p>
+    <p *ngIf="todo.completed === false" style="display: inline-block">{{todo.task}}</p> -->
     <button (click)="removeTask(i)">X</button>
-    <style>
+   <!-- <style>
     #whenTrue {
         text-decoration: line-through;      
     }
-    </style>    <!--Had to make this part separate otherwise it messed with the formatting-->
+    </style> -->
+    <!--Had to make this part separate otherwise it messed with the formatting-->
 
 </div>
-
-<h2>Add Task</h2>
-<input type="text" id="AddInput"/>
-<button (cliuck)="addTask()">Add New Task</button>

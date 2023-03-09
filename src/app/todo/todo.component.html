@@ -1,0 +1,8 @@
+<button *ngIf="todo.completed === false" (click)="completeTask(i)" style="display: inline-block;">Complete</button>
+<p *ngIf="todo.completed === true" id="whenTrue" style="display: inline-block" >{{todo.task}}</p>
+<p *ngIf="todo.completed === false" style="display: inline-block">{{todo.task}}</p>
+<style>
+#whenTrue {
+    text-decoration: line-through;      
+}
+</style> -->
