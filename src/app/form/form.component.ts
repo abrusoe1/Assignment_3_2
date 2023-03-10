@@ -9,12 +9,12 @@ import { Todo } from 'src/Todo';
 export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
-  @Output() save: EventEmitter<Todo> = new EventEmitter<Todo>();
-  addTask(task: (<HTMLInputElement> document.getElementById("AddInput")).value, completed: false){
-  // addTask(){
-  //   let taskName: string = (<HTMLInputElement> document.getElementById("AddInput")).value;
-  //   let t : Todo = {task:taskName, completed:false};
-  //   this.tasks.push;
+  @Output() newTask = new EventEmitter<Todo>();
+  constructor() {}
+  newTodo:Todo ={task:"", completed:false}
+
+  addTask(){
+    this.newTask.emit(this.newTodo);
   }
 
 }
